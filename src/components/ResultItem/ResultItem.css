@@ -1,0 +1,23 @@
+.wrapImg {
+    position: relative;
+}
+.icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: none
+}
+.icon.love{
+    display: block
+}
+.wrapImg .icon > i {
+    color: #ff3860;
+    font-size: 25px;
+}
+.wrapImg:hover > .icon{
+    display: block;
+    opacity: .5;
+}
+.wrapImg:hover > .icon.love {
+    opacity: 1;
+}
