@@ -28,7 +28,7 @@ export class ConnectedResultItem extends Component {
         const {url} = this.props
         const {isFavorite} = this.state;
         return (
-            <div className="col-md-3 my-3">
+            <div className="col-md-6 col-lg-3 my-3">
                 <div className="wrapImg" style={{cursor:'pointer'}} onClick={this.handleFavorite}>
                     <img src={url} className="w-100" style={{height:'200px'}} alt="text"/>
                     <div className={isFavorite?'icon love': 'icon'}>
