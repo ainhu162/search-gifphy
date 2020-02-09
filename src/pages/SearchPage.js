@@ -59,18 +59,3 @@ const mapDispatchToProps = (dispatch)=>{
 }
 const SearchPage = connect(mapStateToProps, mapDispatchToProps)(ConnectedSearchPage)
 export default SearchPage
-// import React from "react";
-// import { connect } from "react-redux";
-
-// const mapStateToProps = state => {
-//   return { images: state.images };
-// };
-
-// const ConnectedList = ({ images }) => {
-//     console.log(images)
-//     return (<ul>das</ul>)
-// }
-
-// const SearchPage = connect(mapStateToProps)(ConnectedList);
-
-// export default SearchPage;

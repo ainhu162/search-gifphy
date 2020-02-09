@@ -56,7 +56,6 @@ const mapStateToProp = state => ({
 })
 
 const  ConnectedMenu = ({favorites}) =>{
-  console.log(favorites)
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <ul className="navbar-nav">{showMenus(menus(favorites.length))}</ul>
