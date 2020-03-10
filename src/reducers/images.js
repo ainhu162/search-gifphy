@@ -1,5 +1,5 @@
 import * as Types from './../constants/ActionType';
-var initialState = {
+const initialState = {
     images: [],
     totalCount: 0,
     loading: false

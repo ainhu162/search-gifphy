@@ -22,7 +22,7 @@ const MenuLink = ({ label, to, activeOnlyWhenExact }) => {
       path={to}
       exact={activeOnlyWhenExact}
       children={({ match }) => {
-        var active = match ? "nav-item active" : "nav-item";
+        const active = match ? "nav-item active" : "nav-item";
         return (
           <li className={active}>
             <Link to={to} className="nav-link">
@@ -35,7 +35,7 @@ const MenuLink = ({ label, to, activeOnlyWhenExact }) => {
   );
 };
 const showMenus = menus => {
-  var result = null;
+  let result = null;
   if (menus.length > 0) {
     result = menus.map((menu, index) => {
       return (

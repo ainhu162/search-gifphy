@@ -1,6 +1,6 @@
 import * as Types from './../constants/ActionType';
 import http from './../services/http';
-import {NotificationManager} from 'react-notifications';
+import { toast } from 'react-toastify';
 
 const _http = new http();
 export const actFetchImagesRequest = (url) => {
@@ -8,11 +8,11 @@ export const actFetchImagesRequest = (url) => {
         dispatch(actFetchImages())
         return _http.get(url).then(res => {
             if(res.data.data.length === 0 ){
-                NotificationManager.error('No image found', '');
+                toast.error('No image found');
             }
             dispatch(actFetchImagesSuccess(res));
         }).catch(err => {
-            NotificationManager.error(err.message, '');
+            toast.error(err.message);
             dispatch(actFetchImagesFail())
         });
     }
@@ -39,7 +39,7 @@ export const actFetchMoreImagesRequest = url => {
         return _http.get(url).then(res => {
             dispatch(actFetchMoreImagesSuccess(res));
         }).catch(err => {
-            NotificationManager.error(err.message, '');
+            toast.error(err.message);
             dispatch(actFetchImagesFail())
         });
     }

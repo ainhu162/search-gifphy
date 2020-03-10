@@ -2,11 +2,11 @@ import React from 'react';
 import Menu from './components/Menu/Menu';
 import routes from './routes';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import {NotificationContainer} from 'react-notifications';
- 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const showContentMenus = (routes) =>{
-  var result = null;
+  let result = null;
   if(routes.length > 0) {
     result = routes.map((route, index) => {
       return <Route key={index} path={route.path} exact={route.exact} component={route.main} />
@@ -23,7 +23,7 @@ function App() {
           <div className="row">
             { showContentMenus(routes) }
           </div>
-        <NotificationContainer/>
+          <ToastContainer />
         </div>
       </div>
     </Router>
